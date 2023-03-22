@@ -16,7 +16,6 @@ void initialize();
 void print_();
 
 void initialize(){
-	/*	Initialize A	*/
 	A = new double*[matrizA];
 	for(int i = 0; i<matrizA; ++i){
 		A[i] = new double[matrizB];
@@ -28,18 +27,16 @@ void initialize(){
 			A[i][j] = numero_aleatorio;
 		}
 	}
-	/*	Initialize B	*/
 	B = new double*[matrizB];
 	for(int i = 0; i<matrizB; ++i){
-		B[i] = new double[matrizC];// dando la dimension de matriz c
+		B[i] = new double[matrizC];
 	}
 	for(int i = 0; i<matrizB; ++i){
 		for(int j =0; j<matrizC; ++j){
-			numero_aleatorio = 1 + rand() % (101 - 1);  ///numeros entre 1-100
+			numero_aleatorio = 1 + rand() % (101 - 1); 
 			B[i][j] = numero_aleatorio;
 		}
 	}
-	/*	Initialize C	*/
 	C = new double*[matrizA];
 	for(int i = 0; i<matrizA; ++i){
 		C[i] = new double[matrizC];
