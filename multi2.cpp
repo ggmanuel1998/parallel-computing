@@ -17,7 +17,7 @@ void initialize();
 void print_();
 
 void initialize(){
-	/*	Initialize A	*/
+
 	A = new double*[matrizA];
 	for(int i = 0; i<matrizA; ++i){
 		A[i] = new double[matrizB];
@@ -29,7 +29,7 @@ void initialize(){
 			A[i][j] = numero_aleatorio;
 		}
 	}
-	/*	Initialize B	*/
+	
 	B = new double*[matrizB];
 	for(int i = 0; i<matrizB; ++i){
 		B[i] = new double[matrizC];
@@ -40,7 +40,7 @@ void initialize(){
 			B[i][j] = numero_aleatorio;
 		}
 	}
-	/*	Initialize C	*/
+	
 	C = new double*[matrizA];
 	for(int i = 0; i<matrizA; ++i){
 		C[i] = new double[matrizC];
@@ -76,13 +76,7 @@ void print_(){
 	
 int main(int argc, char *argv[]) {
 	srand (time(NULL));
-	/* Initialize A andx, assign y = 0 */
 	initialize();
-	/*	Set Matrix C with 0's	*/
-	/* 	L1 Cache logic while it's smaller 
-	in comparison to the matrix it'll be faster  */
-	//blockSize = max(matrizA,matrizC);
-	//blockSize = min(matrizA,matrizC);
 	blockSize = 10;
 	for(int i = 0; i<matrizA; ++i){
 		for(int j = 0; j<matrizC; ++j){
